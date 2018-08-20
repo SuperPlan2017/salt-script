@@ -1,0 +1,4 @@
+devops:
+  '*':
+    - ssl
+    - ssh
