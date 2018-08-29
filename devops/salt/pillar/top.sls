@@ -2,3 +2,4 @@ devops:
   '*':
     - ssl
     - ssh
+    - roles
