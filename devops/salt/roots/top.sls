@@ -1,3 +1,3 @@
-devops:
+base:
   '*':
     - java
