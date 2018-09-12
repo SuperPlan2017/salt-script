@@ -1,5 +1,8 @@
 # salt-script
 
+
+* Install salt-master And minion node
+
 * Use salt stack install component 
 
      - Basic Component

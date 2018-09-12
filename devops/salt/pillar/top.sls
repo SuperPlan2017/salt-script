@@ -1,5 +1,3 @@
 devops:
   '*':
-    - ssl
-    - ssh
-    - roles
+    - java
