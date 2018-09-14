@@ -53,11 +53,9 @@ check-jce-archive:
 
 backup-non-jce-jar:
   cmd.run:
-    - name: mv US_export_policy.jar US_export_policy.jar.nonjce;
+    - name: if test -e US_export_policy.jar then mv US_export_policy.jar US_export_policy.jar.nonjce fi;if test -e local_policy.jar then mv local_policy.jar local_policy.jar.nonjce fi;
     - cwd: {{ java.jre_lib_sec }}
     - creates: {{ policy_jar_bak }}
-    - require:
-      - file: US_export_policy.jar
 
 unpack-jce-archive:
   cmd.run:
