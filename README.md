@@ -17,3 +17,10 @@
          - Jenkins
          - Hygieia
          - Postgresql
+         
+         
+- salt   
+
+ ```
+salt '*' saltutil.refresh_pillar && salt '*' saltutil.sync_modules
+```       
