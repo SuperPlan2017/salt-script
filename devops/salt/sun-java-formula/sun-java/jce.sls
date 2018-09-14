@@ -56,6 +56,8 @@ backup-non-jce-jar:
     - name: mv US_export_policy.jar US_export_policy.jar.nonjce; mv local_policy.jar local_policy.jar.nonjce;
     - cwd: {{ java.jre_lib_sec }}
     - creates: {{ policy_jar_bak }}
+    - require:
+      - cmd: unpack-jce-archive
 
 unpack-jce-archive:
   cmd.run:
