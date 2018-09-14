@@ -57,8 +57,8 @@ backup-non-jce-jar:
     - cwd: {{ java.jre_lib_sec }}
     - creates: {{ policy_jar_bak }}
     - onlyif: >
-        test ! -f US_export_policy.jar ||
-        test ! -f local_policy.jar
+        test  -f US_export_policy.jar ||
+        test  -f local_policy.jar
 
 
 unpack-jce-archive:
