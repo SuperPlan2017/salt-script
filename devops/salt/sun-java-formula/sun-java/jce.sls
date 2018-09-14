@@ -25,7 +25,7 @@ download-jce-archive:
     - name: curl {{ java.dl_opts }} -o '{{ zip_file }}' '{{ java.jce_url }}'
     - creates: {{ zip_file }}
     - onlyif: >
-            test ! -f {{ policy_jar }} ||
+        test ! -f {{ policy_jar }} ||
         test ! -f {{ policy_jar_bak }}
     - require:
       - file: sun-java-remove-old-jce-archive
@@ -57,8 +57,9 @@ backup-non-jce-jar:
     - cwd: {{ java.jre_lib_sec }}
     - creates: {{ policy_jar_bak }}
     - onlyif: >
-            test ! -f US_export_policy.jar ||
-            test ! -f local_policy.jar
+        test ! -f US_export_policy.jar ||
+        test ! -f local_policy.jar
+
 
 unpack-jce-archive:
   cmd.run:
