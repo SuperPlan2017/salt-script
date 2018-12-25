@@ -8,7 +8,7 @@
 {%- set dirhash              = p.get('dirhash', '/96a7b8442fe848ef90c96a2fad6ed6d1') %}
 
 {# See Oracle Java SE checksums page here: https://www.oracle.com/webfolder/s/digest/8u181checksum.html #}
-{%- set default_jce_hash = 'sha256=f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59' %}
+{%- set default_jce_hash = 'sha256=d97f0f402bd65a9c26aa266246b0894c8d6762e82373377641ca779c46406299' %}
 {%- set default_version_name = 'jdk1.' + release + '.' + major + '_' + minor %}
 {%- set version_name         = g.get('version_name', p.get('version_name', default_version_name)) %}
 
@@ -23,7 +23,7 @@
   {% set java_real_home = g.get('java_real_home', p.get('java_real_home', prefix + '/' + version_name + '.jdk/Contents/Home' )) %}
 {% else %}
   {%- set archive = '-linux-x64.tar.gz' %}
-  {%- set default_source_hash = 'sha256=1845567095bfbfebd42ed0d09397939796d05456290fb20a83c476ba09f991d3' %}
+  {%- set default_source_hash = 'sha256=d97f0f402bd65a9c26aa266246b0894c8d6762e82373377641ca779c46406299' %}
   {%- set group = 'root' %}
   {%- set archive_type = g.get('archive_type', p.get('archive_type', 'tar' )) %}
   {%- set java_home = salt['grains.get']('java_home', salt['pillar.get']('java_home', '/usr/lib/java')) %}
