@@ -23,7 +23,7 @@ java:
   # version_name: jre1.8.0_181
 ## linux
   # source_url: http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jre-8u181-linux-x64.tar.gz
-  # source_hash: sha256=80212f7748c2671b89b6085000717c747851db004409dce3bb97f3a2aeb91cdd
+  # source_hash: sha256=0b26c7fcfad20029e6e0989e678efcd4a81f0fe502a478b4972215533867de1b
 ## macos
   # source_url: http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jre-8u181-macosx-x64.dmg
   # source_hash: sha256=5a107575bb6cbd953dece50399467ebcb0c7b8f7fef4d745735457842b3e03b8
